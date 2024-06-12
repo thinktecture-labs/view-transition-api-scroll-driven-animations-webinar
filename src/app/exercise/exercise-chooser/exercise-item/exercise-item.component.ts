@@ -7,10 +7,16 @@ import {
 } from '@angular/core';
 import { Exercise } from '../../exercise.model';
 import { TuiIcon, TuiButton } from '@taiga-ui/core';
+import { ViewTransitionDirective } from '../../../view-transition/view-transition.directive';
 
 @Component({
     selector: 'app-exercise-item',
-    imports: [TuiChip, TuiButton, TuiIcon],
+  imports: [
+    TuiChipModule,
+    TuiButtonModule,
+    TuiIconModule,
+    ViewTransitionDirective,
+  ],
     templateUrl: './exercise-item.component.html',
     styleUrl: './exercise-item.component.scss',
     changeDetection: ChangeDetectionStrategy.OnPush

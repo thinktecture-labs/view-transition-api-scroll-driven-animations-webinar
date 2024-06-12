@@ -1,4 +1,8 @@
-<img [src]="exercise().pictureUrl" />
+<img
+  appViewTransition="exercise-image"
+  [id]="exercise().name"
+  [src]="exercise().pictureUrl"
+/>
 <section>
   <h2>{{ exercise().name }}</h2>
   <span class="tags">

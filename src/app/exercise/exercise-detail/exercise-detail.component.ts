@@ -3,7 +3,6 @@ import {
   ChangeDetectionStrategy,
   Component,
   computed,
-  inject,
   input,
 } from '@angular/core';
 import { RouterLink } from '@angular/router';
@@ -23,4 +22,7 @@ export default class ExerciseDetailComponent {
   public exercise = computed(() =>
     MOCK_DATA.find(({ name }) => name === this.name()),
   );
+  public addBackClass(): void {
+    document.documentElement.classList.add('back');
+  }
 }
