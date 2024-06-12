@@ -1,0 +1,80 @@
+/* Durations */
+// ::view-transition-old(exercise-image),
+// ::view-transition-new(exercise-image) {
+//   animation: none;
+//   height: 100%;
+// }
+//
+// ::view-transition-old(exercise-image) {
+//   display: none;
+// }
+//
+// ::view-transition-new(exercise-image) {
+//   object-fit: cover;
+// }
+
+/* Hin navigieren */
+::view-transition-group(exercise-image) {
+  animation-duration: 700ms;
+}
+
+::view-transition-new(exercise-tags):only-child {
+  animation-duration: 300ms;
+  animation-delay: 200ms;
+  animation-name: slide-in-from-right;
+  animation-direction: forwards;
+}
+
+::view-transition-new(exercise-desc):only-child {
+  animation-duration: 400ms;
+  animation-delay: 300ms;
+  animation-name: slide-in-from-top;
+  animation-direction: forwards;
+}
+
+/* weg navigieren*/
+.back::view-transition-group(exercise-image) {
+  animation-duration: 300ms;
+  animation-delay: 300ms;
+}
+
+.back::view-transition-old(exercise-header):only-child {
+  animation-name: slide-in-from-bottom;
+  animation-duration: 200ms;
+  animation-direction: reverse;
+}
+
+.back::view-transition-old(exercise-desc):only-child {
+  animation-name: slide-in-from-top;
+  animation-duration: 200ms;
+  animation-direction: reverse;
+}
+.back::view-transition-old(exercise-tags):only-child {
+  animation-name: slide-in-from-top;
+  animation-duration: 200ms;
+  animation-direction: reverse;
+}
+
+@keyframes slide-in-from-bottom {
+  from {
+    transform: translateY(30%);
+    opacity: 0;
+  }
+}
+
+@keyframes slide-in-from-top {
+  0% {
+    transform: translateY(-30%);
+    opacity: 0;
+  }
+  60% {
+    opaci: 0.3;
+  }
+}
+
+@keyframes slide-in-from-right {
+  from {
+    transform: translateX(130%);
+    opacity: 0;
+  }
+}

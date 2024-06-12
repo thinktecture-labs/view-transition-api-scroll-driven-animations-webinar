@@ -17,4 +17,8 @@ import { RouterLink } from '@angular/router';
     RouterLink,
   ],
 })
-export default class WorkoutPlannerComponent {}
+export default class WorkoutPlannerComponent {
+  public addBackClass(): void {
+    document.documentElement.classList.add('back');
+  }
+}

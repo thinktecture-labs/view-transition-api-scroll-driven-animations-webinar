@@ -3,6 +3,7 @@
     icon="tuiIconClose"
     tuiIconButton
     [routerLink]="['/workout/planner']"
+    (click)="addBackClass()"
   ></button>
   <h1>{{ exercise()?.name }}</h1>
 </header>
@@ -14,6 +15,7 @@
     }
   </span>
   <p>
+    {{ exercise()?.description }}
     {{ exercise()?.description }}
   </p>
 </main>

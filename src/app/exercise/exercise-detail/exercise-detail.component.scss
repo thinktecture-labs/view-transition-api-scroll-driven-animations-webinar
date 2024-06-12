@@ -1,7 +1,28 @@
+:host {
+  display: block;
+  position: relative;
+}
 header {
   display: flex;
   gap: 2rem;
   padding: 2rem 1rem;
+  position: sticky;
+  top: 0;
+
+  view-transition-name: exercise-header;
+
+  animation: shrink-padding linear both;
+  animation-range: 0 4em;
+  animation-timeline: scroll();
+  z-index: 100;
+  background: white;
+}
+
+h1,
+button {
+  animation: shrink linear both;
+  animation-timeline: scroll();
+  animation-range: inherit;
 }
 
 button {
@@ -16,13 +37,20 @@ img {
   object-fit: cover;
   object-position: top;
   margin-bottom: 1rem;
+
+  view-transition-name: exercise-image;
+
+  animation: scale-fade linear both;
+  animation-timeline: view(0 80dvh);
 }
 
-span {
+.tags {
   --tui-info-bg: #ead9be;
   padding: 0 1rem;
   display: flex;
   gap: 0.5rem;
+
+  view-transition-name: exercise-tags;
 }
 
 p {
@@ -30,4 +58,43 @@ p {
   font-weight: 200;
   line-height: 1.7rem;
   padding: 1rem;
+
+  view-transition-name: exercise-desc;
+}
+
+@keyframes shrink-padding {
+  to {
+    padding: 0.5rem;
+    gap: 0.5em;
+    box-shadow: 0px 5px 10px -5px rgba(0, 0, 0, 0.4);
+  }
+}
+
+@keyframes shrink {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.7);
+  }
+}
+
+@keyframes scale-fade {
+  from {
+    opacity: 1;
+    clip-path: inset(0 0 0 0);
+  }
+  to {
+    opacity: 0;
+    clip-path: inset(45% 20% 45% 20%);
+  }
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }

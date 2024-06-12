@@ -2,13 +2,11 @@ import {
   ChangeDetectionStrategy,
   Component,
   computed,
-  inject,
   input,
 } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TuiButtonModule } from '@taiga-ui/core';
 import { TuiChipModule, TuiIconModule } from '@taiga-ui/experimental';
-import { ExerciseChooserStore } from '../exercise-chooser/signal-chooser.store';
 import { MOCK_DATA } from '../exercise.model';
 
 @Component({
@@ -24,4 +22,7 @@ export default class ExerciseDetailComponent {
   public exercise = computed(() =>
     MOCK_DATA.find(({ name }) => name === this.name()),
   );
+  public addBackClass(): void {
+    document.documentElement.classList.add('back');
+  }
 }

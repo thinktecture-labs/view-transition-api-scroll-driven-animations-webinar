@@ -1,0 +1,107 @@
+::view-transition-old(primary-container) {
+  animation: scale-up-container 800ms linear forwards;
+}
+
+::view-transition-old(primary-image) {
+  animation-name: scale-up, translate-up;
+  animation-duration: 600ms;
+  animation-direction: forwards;
+}
+::view-transition-old(primary-heading) {
+  animation-name: scale-up, translate-right;
+  animation-duration: 600ms;
+  animation-direction: forwards;
+}
+
+.back::view-transition-old(root) {
+  display: none;
+}
+.back::view-transition-new(root) {
+  animation: none;
+}
+.back::view-transition-new(primary-container) {
+  animation: scale-down-container 500ms linear forwards;
+}
+
+.back::view-transition-new(primary-image) {
+  animation-name: move-in-right;
+  animation-duration: 300ms;
+  animation-delay: 200ms;
+  animation-direction: forwards;
+}
+
+.back::view-transition-new(primary-heading),
+.back::view-transition-new(primary-text) {
+  animation-name: move-in-left;
+  animation-duration: 300ms;
+  animation-delay: 200ms;
+  animation-direction: forwards;
+}
+
+@keyframes scale-up-container {
+  0% {
+    transform: scaleX(1) scaleY(1);
+  }
+  60% {
+    transform: scaleX(2) scaleY(10);
+    opacity: 1;
+  }
+  100% {
+    transform: scaleX(2) scaleY(10);
+    opacity: 0;
+  }
+}
+@keyframes scale-down-container {
+  100% {
+    transform: scaleX(1) scaleY(1);
+  }
+  0% {
+    transform: scaleX(2) scaleY(10);
+  }
+}
+
+@keyframes scale-up {
+  to {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+@keyframes translate-right {
+  to {
+    transform: translatex(5rem);
+  }
+}
+
+@keyframes translate-up {
+  to {
+    transform: translateY(-8rem);
+  }
+}
+
+@keyframes move-in-right {
+  0% {
+    transform: translateX(150%);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+@keyframes move-in-left {
+  0% {
+    transform: translateX(-150%);
+    opacity: 0;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
