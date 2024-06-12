@@ -1,0 +1,19 @@
+<header>
+  <button
+    icon="tuiIconClose"
+    tuiIconButton
+    [routerLink]="['/workout/planner']"
+  ></button>
+  <h1>{{ exercise()?.name }}</h1>
+</header>
+<main>
+  <img [src]="exercise()?.pictureUrl" />
+  <span class="tags">
+    @for (muscle of exercise()?.muscleGroups; track muscle) {
+      <tui-chip appearance="info">{{ muscle }}</tui-chip>
+    }
+  </span>
+  <p>
+    {{ exercise()?.description }}
+  </p>
+</main>

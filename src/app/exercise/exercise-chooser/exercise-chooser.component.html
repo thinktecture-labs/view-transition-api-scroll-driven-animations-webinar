@@ -1,0 +1,33 @@
+<div
+  class="swipe-container"
+  [class.workout]="workoutSelected()"
+  (tuiSwipe)="swipe($event)"
+>
+  <section>
+    <h2>Übungen</h2>
+    <div class="exercises">
+      @for (exercise of exercises(); track exercise.name) {
+        <app-exercise-item
+          [exercise]="exercise"
+          [routerLink]="['/workout/exercise', exercise.name]"
+          (action)="addExercise(exercise.name)"
+        ></app-exercise-item>
+      } @empty {
+        <p>Keine Übungen vorhanden</p>
+      }
+    </div>
+  </section>
+  <section class="workout">
+    <h2>Workout</h2>
+    <div class="exercises">
+      @for (exercise of workout(); track exercise.name) {
+        <app-exercise-item
+          [exercise]="exercise"
+          [routerLink]="['/workout/exercise', exercise.name]"
+          actionIcon="tuiIconMinus"
+          (action)="removeExercise(exercise.name)"
+        ></app-exercise-item>
+      }
+    </div>
+  </section>
+</div>

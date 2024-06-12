@@ -1,0 +1,21 @@
+:host {
+  display: block;
+  overflow: clip;
+  max-height: 100dvh;
+}
+header {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem 1rem;
+  background-color: #e1f0f4;
+}
+
+button {
+  border-radius: 100%;
+  --tui-primary: #bfe5f0;
+  --tui-primary-text: black;
+}
+
+app-exercise-chooser {
+  height: calc(100dvh - 7.5rem);
+}

@@ -1,0 +1,15 @@
+<img [src]="exercise().pictureUrl" />
+<section>
+  <h2>{{ exercise().name }}</h2>
+  <span class="tags">
+    @for (muscle of exercise().muscleGroups; track muscle) {
+      <tui-chip appearance="info" size="xs">{{ muscle }}</tui-chip>
+    }
+  </span>
+</section>
+<button
+  tuiIconButton
+  (click)="action.emit()"
+  [icon]="actionIcon()"
+  size="s"
+></button>

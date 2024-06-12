@@ -1,0 +1,33 @@
+header {
+  display: flex;
+  gap: 2rem;
+  padding: 2rem 1rem;
+}
+
+button {
+  border-radius: 100%;
+  --tui-primary: #ead9be;
+  --tui-primary-text: black;
+}
+
+img {
+  width: 100%;
+  height: 35dvh;
+  object-fit: cover;
+  object-position: top;
+  margin-bottom: 1rem;
+}
+
+span {
+  --tui-info-bg: #ead9be;
+  padding: 0 1rem;
+  display: flex;
+  gap: 0.5rem;
+}
+
+p {
+  font-size: 1.1rem;
+  font-weight: 200;
+  line-height: 1.7rem;
+  padding: 1rem;
+}

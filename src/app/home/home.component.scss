@@ -1,0 +1,90 @@
+header,
+main {
+  padding: 0.5rem 1.5rem;
+  overflow: hidden;
+}
+header {
+  display: flex;
+  gap: 3rem;
+  margin-bottom: 2rem;
+  align-items: center;
+
+  height: 5rem;
+  svg {
+    width: 30rem;
+  }
+}
+
+.primary-card {
+  border-radius: 2rem;
+  background-color: #ffe9ca;
+  display: grid;
+  grid-template-columns: 1fr 45%;
+  padding: 1rem;
+  overflow: clip;
+  height: 12rem;
+  justify-content: center;
+
+  h2 {
+    font-weight: bold;
+    font-size: 1.75rem;
+    line-height: 1.75rem;
+    letter-spacing: 0.2rem;
+    margin-bottom: 0.25rem;
+  }
+
+  img {
+    max-height: 22rem;
+    filter: drop-shadow(30px 10px 4px #facc8c);
+  }
+
+  &:hover,
+  &:active {
+    outline: 2px solid #facc8c;
+    img {
+      scale: 1.1;
+    }
+  }
+}
+
+section {
+  margin-top: 2rem;
+}
+
+.scroll-container {
+  overflow-x: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.cards {
+  display: flex;
+  width: 130%;
+
+  position: relative;
+  overflow-x: auto;
+  gap: 1rem;
+}
+
+.card {
+  --card-background: #272d34;
+  --card-color: white;
+  color: var(--card-color);
+  border-radius: 1rem;
+  height: 12rem;
+  width: 8rem;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  background-color: var(--card-background);
+  padding: 0.5rem 1rem;
+
+  p {
+    font-weight: 500;
+    font-size: 1.1rem;
+  }
+}
+
+.personal > p {
+  color: #71878d;
+}

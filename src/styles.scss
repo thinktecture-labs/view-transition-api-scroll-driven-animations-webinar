@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+html {
+  font-family: "Dosis", sans-serif;
+  font-style: normal;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
+.t-root-content {
+  height: 100dvh !important;
+}
+
+[tuiAppearance][data-appearance="flat"] {
+  color: unset;
+}
