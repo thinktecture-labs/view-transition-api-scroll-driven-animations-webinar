@@ -12,9 +12,9 @@ import { ViewTransitionDirective } from '../../../view-transition/view-transitio
 @Component({
     selector: 'app-exercise-item',
   imports: [
-    TuiChipModule,
-    TuiButtonModule,
-    TuiIconModule,
+    TuiChip,
+    TuiButton,
+    TuiIcon,
     ViewTransitionDirective,
   ],
     templateUrl: './exercise-item.component.html',

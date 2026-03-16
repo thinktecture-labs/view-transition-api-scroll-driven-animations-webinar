@@ -1,9 +1,7 @@
 import { provideAnimations } from '@angular/platform-browser/animations';
-import { TuiRootModule } from '@taiga-ui/core';
 import {
   ApplicationConfig,
   isDevMode,
-  importProvidersFrom,
   inject,
 } from '@angular/core';
 import {
@@ -15,7 +13,6 @@ import {
 
 import { routes } from './app.routes';
 import { provideServiceWorker } from '@angular/service-worker';
-import { TuiIconModule } from '@taiga-ui/experimental';
 import { ViewTransitionService } from './view-transition/view-transition.service';
 
 export const appConfig: ApplicationConfig = {
@@ -33,8 +30,6 @@ export const appConfig: ApplicationConfig = {
       enabled: !isDevMode(),
       registrationStrategy: 'registerWhenStable:30000',
     }),
-    importProvidersFrom(TuiRootModule),
-    TuiIconModule,
   ],
 };
 
