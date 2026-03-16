@@ -1,5 +1,6 @@
+import { TuiInitialsPipe, TuiAutoColorPipe } from "@taiga-ui/core";
+import { TuiAvatar } from "@taiga-ui/kit";
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { TuiAvatarModule } from '@taiga-ui/kit';
 import { NavigationComponent } from '../navigation/navigation.component';
 import { RouterLink } from '@angular/router';
 
@@ -9,6 +10,6 @@ import { RouterLink } from '@angular/router';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [TuiAvatarModule, NavigationComponent, RouterLink],
+  imports: [TuiAvatar, NavigationComponent, RouterLink, TuiInitialsPipe, TuiAutoColorPipe],
 })
 export class HomeComponent {}

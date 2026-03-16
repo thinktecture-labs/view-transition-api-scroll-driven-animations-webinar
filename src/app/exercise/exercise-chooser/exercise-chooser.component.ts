@@ -9,12 +9,12 @@ import {
 import { ExerciseChooserStore } from './signal-chooser.store';
 import { ExerciseItemComponent } from './exercise-item/exercise-item.component';
 import { RouterLink } from '@angular/router';
-import { TuiSwipe, TuiSwipeModule } from '@taiga-ui/cdk';
+import { TuiSwipe, TuiSwipeEvent } from '@taiga-ui/cdk';
 
 @Component({
   selector: 'app-exercise-chooser',
   standalone: true,
-  imports: [ExerciseItemComponent, RouterLink, TuiSwipeModule],
+  imports: [ExerciseItemComponent, RouterLink, TuiSwipe],
   templateUrl: './exercise-chooser.component.html',
   styleUrl: './exercise-chooser.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -32,7 +32,7 @@ export class ExerciseChooserComponent implements OnInit {
     this.store.init();
   }
 
-  public swipe(swipe: TuiSwipe): void {
+  public swipe(swipe: TuiSwipeEvent): void {
     if (swipe.direction === 'left') {
       this.currentView.set('workout');
     }

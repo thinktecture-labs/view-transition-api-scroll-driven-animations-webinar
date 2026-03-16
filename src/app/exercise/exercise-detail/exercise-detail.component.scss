@@ -6,8 +6,8 @@ header {
 
 button {
   border-radius: 100%;
-  --tui-primary: #ead9be;
-  --tui-primary-text: black;
+  --tui-background-accent-1: #ead9be;
+  --tui-text-primary-on-accent-1: black;
 }
 
 img {
@@ -19,7 +19,7 @@ img {
 }
 
 span {
-  --tui-info-bg: #ead9be;
+  --tui-status-info-pale: #ead9be;
   padding: 0 1rem;
   display: flex;
   gap: 0.5rem;

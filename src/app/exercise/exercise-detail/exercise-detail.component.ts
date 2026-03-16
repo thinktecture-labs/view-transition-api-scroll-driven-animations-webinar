@@ -1,3 +1,4 @@
+import { TuiChip } from "@taiga-ui/kit";
 import {
   ChangeDetectionStrategy,
   Component,
@@ -6,15 +7,14 @@ import {
   input,
 } from '@angular/core';
 import { RouterLink } from '@angular/router';
-import { TuiButtonModule } from '@taiga-ui/core';
-import { TuiChipModule, TuiIconModule } from '@taiga-ui/experimental';
+import { TuiIcon, TuiButton } from '@taiga-ui/core';
 import { ExerciseChooserStore } from '../exercise-chooser/signal-chooser.store';
 import { MOCK_DATA } from '../exercise.model';
 
 @Component({
   selector: 'app-exercise-detail',
   standalone: true,
-  imports: [TuiButtonModule, TuiIconModule, TuiChipModule, RouterLink],
+  imports: [TuiButton, TuiIcon, TuiChip, RouterLink],
   templateUrl: './exercise-detail.component.html',
   styleUrl: './exercise-detail.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,

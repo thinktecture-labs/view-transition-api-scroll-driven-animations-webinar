@@ -1,6 +1,5 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { TuiButtonModule } from '@taiga-ui/core';
-import { TuiIconModule } from '@taiga-ui/experimental';
+import { TuiIcon, TuiButton } from '@taiga-ui/core';
 import { ExerciseChooserComponent } from '../../exercise/exercise-chooser/exercise-chooser.component';
 import { RouterLink } from '@angular/router';
 
@@ -11,8 +10,8 @@ import { RouterLink } from '@angular/router';
   styleUrl: './workout-planner.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [
-    TuiButtonModule,
-    TuiIconModule,
+    TuiButton,
+    TuiIcon,
     ExerciseChooserComponent,
     RouterLink,
   ],

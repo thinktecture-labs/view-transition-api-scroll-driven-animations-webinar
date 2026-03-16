@@ -24,7 +24,7 @@
         <app-exercise-item
           [exercise]="exercise"
           [routerLink]="['/workout/exercise', exercise.name]"
-          actionIcon="tuiIconMinus"
+          actionIcon="@tui.minus"
           (action)="removeExercise(exercise.name)"
         ></app-exercise-item>
       }
