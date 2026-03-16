@@ -9,12 +9,11 @@ import { Exercise } from '../../exercise.model';
 import { TuiIcon, TuiButton } from '@taiga-ui/core';
 
 @Component({
-  selector: 'app-exercise-item',
-  standalone: true,
-  imports: [TuiChip, TuiButton, TuiIcon],
-  templateUrl: './exercise-item.component.html',
-  styleUrl: './exercise-item.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-exercise-item',
+    imports: [TuiChip, TuiButton, TuiIcon],
+    templateUrl: './exercise-item.component.html',
+    styleUrl: './exercise-item.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ExerciseItemComponent {
   public exercise = input.required<Exercise>();

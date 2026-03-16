@@ -12,12 +12,11 @@ import { RouterLink } from '@angular/router';
 import { TuiSwipe, TuiSwipeEvent } from '@taiga-ui/cdk';
 
 @Component({
-  selector: 'app-exercise-chooser',
-  standalone: true,
-  imports: [ExerciseItemComponent, RouterLink, TuiSwipe],
-  templateUrl: './exercise-chooser.component.html',
-  styleUrl: './exercise-chooser.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+    selector: 'app-exercise-chooser',
+    imports: [ExerciseItemComponent, RouterLink, TuiSwipe],
+    templateUrl: './exercise-chooser.component.html',
+    styleUrl: './exercise-chooser.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ExerciseChooserComponent implements OnInit {
   private store = inject(ExerciseChooserStore);

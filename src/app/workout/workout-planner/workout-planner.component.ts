@@ -4,16 +4,15 @@ import { ExerciseChooserComponent } from '../../exercise/exercise-chooser/exerci
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-workout-planner',
-  standalone: true,
-  templateUrl: './workout-planner.component.html',
-  styleUrl: './workout-planner.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [
-    TuiButton,
-    TuiIcon,
-    ExerciseChooserComponent,
-    RouterLink,
-  ],
+    selector: 'app-workout-planner',
+    templateUrl: './workout-planner.component.html',
+    styleUrl: './workout-planner.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [
+        TuiButton,
+        TuiIcon,
+        ExerciseChooserComponent,
+        RouterLink,
+    ]
 })
 export default class WorkoutPlannerComponent {}

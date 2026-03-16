@@ -5,11 +5,10 @@ import { NavigationComponent } from '../navigation/navigation.component';
 import { RouterLink } from '@angular/router';
 
 @Component({
-  selector: 'app-home',
-  standalone: true,
-  templateUrl: './home.component.html',
-  styleUrl: './home.component.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [TuiAvatar, NavigationComponent, RouterLink, TuiInitialsPipe, TuiAutoColorPipe],
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    styleUrl: './home.component.scss',
+    changeDetection: ChangeDetectionStrategy.OnPush,
+    imports: [TuiAvatar, NavigationComponent, RouterLink, TuiInitialsPipe, TuiAutoColorPipe]
 })
 export class HomeComponent {}
